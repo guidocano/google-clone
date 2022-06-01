@@ -12,8 +12,9 @@
 }
 
 .not-found {
+    color:rgba(0,0,0,0.8);
     position: fixed;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -24,7 +25,7 @@
 @media screen and (max-width: 640px) {
 
     .image-list{
-        margin-top: 120px;
+        margin-top: 20px;
         display:grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 0px 1px;
