@@ -16,7 +16,7 @@ function Search ({hideButtons = false,}) {
         e.preventDefault();
         if (localInput !== "") {
             setInput(localInput)
-            navigate("/search")
+            navigate("/google-clone/search")
         }
     }
 
@@ -24,7 +24,7 @@ function Search ({hideButtons = false,}) {
         e.preventDefault();
         if (localInput !== "") {
             setInput(localInput)
-            navigate("/lucky")
+            navigate("/google-clone/lucky")
         }
     }
 

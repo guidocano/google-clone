@@ -34,7 +34,7 @@ function SearchPage() {
         <div className='searchPage'>
 
             <div className='searchPage__header'>
-                <Link to="/">
+                <Link to="/google-clone">
                     <img className='searchPage__logo' src={logo} alt="google logo" />    
                 </Link>
                 
@@ -49,37 +49,37 @@ function SearchPage() {
                     <div className='searchPage__options'>
                         <div className='searchPage__optionsLeft'>
                             <div className='searchPage__option'>
-                                <Link className='icon-all' to="/search">
+                                <Link className='icon-all' to="/google-clone/search">
                                     <SearchIcon className="searchPage__optionsIcons"/>
                                     All
                                     </Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to="/search">
+                                <Link to="/google-clone/search">
                                     <ImageIcon className="searchPage__optionsIcons"/>
                                     Images
                                 </Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to="/search">
+                                <Link to="/google-clone/search">
                                     <PinDropIcon className="searchPage__optionsIcons"/>
                                     Maps
                                 </Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to="/search">
+                                <Link to="/google-clone/search">
                                     <FeedIcon className="searchPage__optionsIcons"/>
                                     News
                                 </Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to="/search">
+                                <Link to="/google-clone/search">
                                     <OndemandVideoIcon className="searchPage__optionsIcons"/>
                                     Videos
                                 </Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to="/search">
+                                <Link to="/google-clone/search">
                                     <MoreVertIcon className="searchPage__optionsIcons"/>
                                     More
                                 </Link>
@@ -91,7 +91,7 @@ function SearchPage() {
                                 <Link to="/settings">Settings</Link>
                             </div> */}
                             <div className='searchPage__option'>
-                                <Link to="/">Tools</Link>
+                                <Link to="/google-clone">Tools</Link>
                             </div>
                         </div>
                     </div>

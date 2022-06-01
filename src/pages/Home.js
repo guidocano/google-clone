@@ -15,13 +15,13 @@ const Home = () => {
         <div className="home">
             <div className="home__header">
                 <div className="home__headerLeft">
-                    <Link className="header-all" to="/">ALL</Link>
-                    <Link to="/">IMAGES</Link>
+                    <Link className="header-all" to="/google-clone">ALL</Link>
+                    <Link to="/google-clone">IMAGES</Link>
                 </div>
 
                 <div className="home__headerRight">
-                    <Link to="/" className="home__headerToHide">Gmail</Link>
-                    <Link to="/" className="home__headerToHide">Images</Link>
+                    <Link to="/google-clone" className="home__headerToHide">Gmail</Link>
+                    <Link to="/google-clone" className="home__headerToHide">Images</Link>
                     <AppsIcon className="apps-icon"/>
                     <ButtonBlue text="Sign in"/>
                 </div>

@@ -12,9 +12,9 @@ function App() {
       
         <Router>
           <Routes>
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/" element={<Home/>} />
-            <Route path="/lucky" element={<LuckySearch/>} />
+            <Route path="/google-clone/search" element={<SearchPage />} />
+            <Route path="/google-clone" element={<Home/>} />
+            <Route path="/google-clone/lucky" element={<LuckySearch/>} />
           </Routes>
         </Router>
       
