@@ -7,16 +7,16 @@ function Footer(props) {
     <footer className={props.class}>
         <div className="footerbox">
             <div className="left">
-                <Link to="/">About</Link>
-                <Link to="/">Advertising</Link>
-                <Link to="/">Business</Link>
-                <Link to="/">How Search works</Link>
+                <Link to="/google-clone">About</Link>
+                <Link to="/google-clone">Advertising</Link>
+                <Link to="/google-clone">Business</Link>
+                <Link to="/google-clone">How Search works</Link>
             </div>
 
             <div className="right">
-                <Link to="/">Privacy</Link>
-                <Link to="/">Terms</Link>
-                <Link to="/">Settings</Link>
+                <Link to="/google-clone">Privacy</Link>
+                <Link to="/google-clone">Terms</Link>
+                <Link to="/google-clone">Settings</Link>
         </div>
         </div>
 

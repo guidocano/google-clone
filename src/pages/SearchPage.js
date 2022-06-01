@@ -91,7 +91,7 @@ function SearchPage() {
                                 <Link to="/settings">Settings</Link>
                             </div> */}
                             <div className='searchPage__option'>
-                                <Link to="/google-clone">Tools</Link>
+                                <Link to="/google-clone/search">Tools</Link>
                             </div>
                         </div>
                     </div>
