@@ -1,12 +1,12 @@
-import React, {useContext} from 'react'
+import React, {useState, useContext} from 'react'
 import {TermContext} from "../api/TermContext"
 import "./SearchPage.css"
 import SearchImages from "../components/SearchImages"
 import Footer from "../components/Footer"
-import useGoogleSearch from "../api/useGoogleSearch"
 import logo from "../assets/logo.png"
 import {Link} from "react-router-dom"
-// import Response from "../pages/Response"
+import useUnsplash from "../api/useUnsplash"
+import ImageList from "../components/ImageList"
 
 import SearchIcon from '@mui/icons-material/Search';
 import ImageIcon from '@mui/icons-material/Image';
@@ -18,16 +18,20 @@ import AppsIcon from '@mui/icons-material/Apps';
 import ButtonBlue from "../components/ButtonBlue"
 
 
-function SearchPage() {
+function SearchPageImages() {
 
     const [input] = useContext(TermContext)
-    
-    const { data } = useGoogleSearch(input);
+    const [images, setImages] = useState([])
 
-    // const data = Response
+    const onSearchSubmit = async (term) => {
+        const response = await useUnsplash.get("/search/photos", {
+            params: {query: term, per_page: 20},
+        });
+        setImages(response.data.results)
+    }
 
-    // console.log(data)
-    // console.log(input)
+    onSearchSubmit(input)
+
 
     return (
         
@@ -99,26 +103,12 @@ function SearchPage() {
             </div>
             
             
-            <div className='searchPage__results'>
-                <p className='searchPage__resultCount'>
-                    About {(data)? data?.searchInformation.formattedTotalResults : 0} results ({(data)? data?.searchInformation.formattedSearchTime: 0} seconds) 
-                </p>
-
-                {data?.items.map(item => (
-                    <div className='searchPage__result' key={item.cacheId}>
-                        <a className='searchPage__resultLink'href={item.link}>
-                            {item.displayLink}
-                        </a>
-                        <a className='searchPage__resultTitle' href={item.link}>
-                            <h2>{item.title}</h2>
-                        </a>
-                        <p className="searchPage__resultSnippet">{item.snippet}</p>
-                    </div>
-                ))}
+            <div className='searchPageImages__results'>
+                <ImageList images={images} />
             </div>
             <Footer class="footer-static"/>            
         </div>
   )
 }
 
-export default SearchPage
+export default SearchPageImages

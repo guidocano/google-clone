@@ -87,6 +87,14 @@
     text-decoration-color: rgb(48, 50, 52) !important;
 }
 
+/* IMAGE SEARCH RESULTS */
+
+.searchPageImages__results {
+    margin: 4px;
+    min-height: 100vh;
+}
+
+
 /* SEARCH RESULTS */
 
 .searchPage__result {
