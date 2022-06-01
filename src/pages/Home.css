@@ -93,4 +93,10 @@
         text-decoration: underline !important;
         text-underline-offset: 0.9em;
        }
+
+    .header-all {
+        color: rgb(16, 129, 235) !important;
+        text-decoration: underline !important;
+        text-underline-offset: 0.9em;
+    }
 }

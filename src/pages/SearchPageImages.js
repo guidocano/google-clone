@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import {TermContext} from "../api/TermContext"
 import "./SearchPage.css"
-import Search from "../components/Search"
+import SearchImages from "../components/SearchImages"
 import Footer from "../components/Footer"
 import useGoogleSearch from "../api/useGoogleSearch"
 import logo from "../assets/logo.png"
@@ -39,7 +39,7 @@ function SearchPage() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <Search hideButtons/>
+                    <SearchImages hideButtons/>
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>
@@ -49,13 +49,13 @@ function SearchPage() {
                     <div className='searchPage__options'>
                         <div className='searchPage__optionsLeft'>
                             <div className='searchPage__option'>
-                                <Link className='icon-all' to="/google-clone/search">
+                                <Link to="/google-clone/search">
                                     <SearchIcon className="searchPage__optionsIcons"/>
                                     All
                                     </Link>
                             </div>
                             <div className='searchPage__option'>
-                                <Link to="/google-clone/images/search">
+                                <Link className='icon-all' to="/google-clone/search">
                                     <ImageIcon className="searchPage__optionsIcons"/>
                                     Images
                                 </Link>
