@@ -21,7 +21,7 @@ const Home = () => {
                 </div>
 
                 <div className="home__headerRight">
-                    <Link to="/google-clone" className="home__headerToHide">Gmail</Link>
+                    <Link to="/" className="home__headerToHide">Gmail</Link>
                     <Link to="/google-clone/images" className="home__headerToHide">Images</Link>
                     <AppsIcon className="apps-icon"/>
                     <ButtonBlue text="Sign in"/>
