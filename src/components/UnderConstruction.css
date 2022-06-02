@@ -1,0 +1,48 @@
+body {
+    max-width: 100vw;
+}
+
+.row {
+    display: flex;
+    justify-content:flex-start;
+    margin-top: 50px;
+}
+
+.column {
+    flex: 49%;
+    align-self:center;
+}
+
+.robot{
+    display: block;
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-gray{
+    color:gray;
+}
+
+.google-logo2{
+    width: 250px !important;
+    display: block;
+    width:300px;
+    margin-left: 0;
+    margin-right: auto;
+    padding-bottom: 10px;
+    
+}
+
+@media screen and (max-width: 640px) {
+    .row {
+        margin-top: -40px;
+        flex-wrap: wrap;
+    }
+
+    .google-logo2{
+        height: 60px;
+        visibility: hidden !important;
+    }
+
+}
