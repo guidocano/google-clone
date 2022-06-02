@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import {TermContext} from "../api/TermContext"
 import "./SearchPage.css"
 import SearchImages from "../components/SearchImages"
@@ -20,17 +20,11 @@ import ButtonBlue from "../components/ButtonBlue"
 
 function SearchPageImages() {
 
-    const [input] = useContext(TermContext)
-    const [images, setImages] = useState([])
+    const {active} = useContext(TermContext)
+    const [activeInput] = active
 
-    const onSearchSubmit = async (term) => {
-        const response = await useUnsplash.get("/search/photos", {
-            params: {query: term, per_page: 20},
-        });
-        setImages(response.data.results)
-    }
-
-    onSearchSubmit(input)
+    const {data} = useUnsplash(activeInput);
+    // console.log(data?.data.results)
 
 
     return (
@@ -43,7 +37,7 @@ function SearchPageImages() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <SearchImages hideButtons/>
+                    <SearchImages/>
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>
@@ -104,7 +98,7 @@ function SearchPageImages() {
             
             
             <div className='searchPageImages__results'>
-                <ImageList images={images} />
+                <ImageList images={data?.data.results} />
             </div>
             <Footer class="footer-static"/>            
         </div>

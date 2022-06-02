@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react";
+import React, {useContext} from "react";
 import "./Search.css";
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from "@mui/icons-material/Mic";
@@ -6,24 +6,26 @@ import Button from "./Button";
 import {TermContext} from "../api/TermContext"
 import {useNavigate} from "react-router-dom"
 
-function Search ({hideButtons = false,}) {
+function Search ({hideButtons = false}) {
 
-    const [input, setInput] = useContext(TermContext)
-    const [localInput, setLocalInput] = useState(input)
-    const navigate = useNavigate()
-        
+    const {input, active} = useContext(TermContext)
+    const [inputValue, setInputValue] = input
+    const [, setActiveInput] = active
+
+    const navigate = useNavigate()  
+    
     const search = (e) => {
         e.preventDefault();
-        if (localInput !== "") {
-            setInput(localInput)
+        if (inputValue !== "") {
+            setActiveInput(inputValue)
             navigate("/google-clone/search")
         }
     }
 
     function searchLucky (e) {
         e.preventDefault();
-        if (localInput !== "") {
-            setInput(localInput)
+        if (inputValue !== "") {
+            setActiveInput(inputValue)
             navigate("/google-clone/lucky")
         }
     }
@@ -32,7 +34,7 @@ function Search ({hideButtons = false,}) {
         <form onSubmit={search} className="search">
             <div className="search__input">
                 <SearchIcon className="search__inputIcon" />
-                <input value={localInput} onChange={e => setLocalInput(e.target.value)} />
+                <input value={inputValue} onChange={e => setInputValue(e.target.value)} />
                 <MicIcon className="mic-icon"/>
             </div>
             

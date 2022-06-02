@@ -18,6 +18,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    animation-name: visibility;
+    animation-duration: 1s;
+}
+
+@keyframes visibility {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
 }
 
 
@@ -38,5 +49,8 @@
         margin-left: 10px;
     }
 
+    .not-found {
+        top: 35%;
+    }
 
 }

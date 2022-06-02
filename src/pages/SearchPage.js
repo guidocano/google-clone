@@ -20,14 +20,15 @@ import ButtonBlue from "../components/ButtonBlue"
 
 function SearchPage() {
 
-    const [input] = useContext(TermContext)
+    const {active} = useContext(TermContext)
+    // const [inputValue, setInputValue] = input
+    const [activeInput] = active
     
-    const { data } = useGoogleSearch(input);
+    const { data } = useGoogleSearch(activeInput);
 
-    // const data = Response
 
-    // console.log(data)
-    // console.log(input)
+    // console.log(data?.data)
+
 
     return (
         
@@ -39,7 +40,7 @@ function SearchPage() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <Search hideButtons/>
+                    <Search hideButtons />
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>
@@ -101,11 +102,11 @@ function SearchPage() {
             
             <div className='searchPage__results'>
                 <p className='searchPage__resultCount'>
-                    About {(data)? data?.searchInformation.formattedTotalResults : 0} results ({(data)? data?.searchInformation.formattedSearchTime: 0} seconds) 
+                    About {(data)? data?.data.searchInformation.formattedTotalResults : 0} results ({(data)? data?.data.searchInformation.formattedSearchTime: 0} seconds) 
                 </p>
 
-                {data?.items.map(item => (
-                    <div className='searchPage__result' key={item.cacheId}>
+                {data?.data.items.map(item => (
+                    <div className='searchPage__result' key={item.cacheId? item.cacheId : item.formattedUrl }>
                         <a className='searchPage__resultLink'href={item.link}>
                             {item.displayLink}
                         </a>

@@ -45,3 +45,17 @@
     z-index: 999;
     display: none;
 }
+
+/* RESPONSIVE */
+/* @media screen and (max-width: 640px) {
+
+    .search__buttons {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        z-index: 999;
+        display: none;
+    }
+
+} */
