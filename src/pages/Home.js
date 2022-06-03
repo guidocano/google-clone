@@ -16,7 +16,7 @@ const Home = () => {
         <div className="home">
             <div className="home__header">
                 <div className="home__headerLeft">
-                    <Link className="header-all" to="/google-clone">ALL</Link>
+                    <Link className="header-small" to="/google-clone"><span>ALL</span></Link>
                     <Link to="/google-clone/images">IMAGES</Link>
                 </div>
 

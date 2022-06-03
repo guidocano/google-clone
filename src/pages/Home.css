@@ -89,14 +89,30 @@
     }
 
     .header-all {
-        color: rgb(16, 129, 235) !important;
-        text-decoration: underline !important;
-        text-underline-offset: 0.9em;
-       }
+        color: rgb(16, 129, 235)!important;
+    }
 
-    .header-all {
-        color: rgb(16, 129, 235) !important;
-        text-decoration: underline !important;
-        text-underline-offset: 0.9em;
+    .header-all::before{
+        content: "";
+        position: absolute;
+        top: 40px;
+        width: 51px;
+        height: 2px;
+        background: rgb(16, 129, 235);
+        transform: translateX(0%);
+    }
+    
+    .header-small {
+        color: rgb(16, 129, 235)!important;
+    }
+
+    .header-small::before{
+        content: "";
+        position: absolute;
+        top: 40px;
+        width: 22px;
+        height: 2px;
+        background: rgb(16, 129, 235);
+        transform: translateX(0%);
     }
 }
