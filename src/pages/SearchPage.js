@@ -35,7 +35,7 @@ function SearchPage() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <Search hideButtons />
+                    <Search hideButtons route="search/" />
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>

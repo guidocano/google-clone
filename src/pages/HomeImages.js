@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import AppsIcon from '@mui/icons-material/Apps';
 // import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import logo from "../assets/logoi.png"
-import SearchImages from "../components/SearchImages"
+import Search from "../components/Search"
 import Footer from "../components/Footer"
 import ButtonBlue from "../components/ButtonBlue"
 
@@ -30,7 +30,7 @@ const Home = () => {
             <div className="home__body"> 
                 <img src={logo} className="logo" alt="google logo" />
                 <div className="home__inputContainer">
-                    {<SearchImages />}
+                    {<Search route="images/search/" />}
                 </div>
             </div>
             <Footer class="footer-fixed"/>

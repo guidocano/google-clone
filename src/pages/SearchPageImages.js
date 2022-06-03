@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import {TermContext} from "../api/TermContext"
 import "./SearchPage.css"
-import SearchImages from "../components/SearchImages"
+import Search from "../components/Search"
 import Footer from "../components/Footer"
 import logo from "../assets/logo.png"
 import {Link} from "react-router-dom"
@@ -32,7 +32,7 @@ function SearchPageImages() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <SearchImages/>
+                    <Search hideButtons route="images/search/" />
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>

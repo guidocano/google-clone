@@ -35,7 +35,7 @@ function SearchPageNews() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <Search hideButtons />
+                    <Search hideButtons route="news/search" />
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>

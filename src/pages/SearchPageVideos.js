@@ -35,7 +35,7 @@ function SearchPageVideos() {
                 </Link>
                 
                 <div className='searchPage__headerBody'>
-                    <Search hideButtons />
+                    <Search hideButtons route="videos/search" />
 
                     <div className="right-navbar">
                         <AppsIcon className="apps-icon"/>

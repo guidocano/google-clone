@@ -6,7 +6,7 @@ import Button from "./Button";
 import {TermContext} from "../api/TermContext"
 import {useNavigate} from "react-router-dom"
 
-function Search ({hideButtons = false}) {
+function Search ({hideButtons = false, route}) {
 
     const {input, active} = useContext(TermContext)
     const [inputValue, setInputValue] = input
@@ -18,7 +18,7 @@ function Search ({hideButtons = false}) {
         e.preventDefault();
         if (inputValue !== "") {
             setActiveInput(inputValue)
-            navigate("/google-clone/search")
+            navigate(`/google-clone/${route}`)
         }
     }
 

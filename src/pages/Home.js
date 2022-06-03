@@ -31,7 +31,7 @@ const Home = () => {
             <div className="home__body"> 
                 <img src={logo} className="logo" alt="google logo" />
                 <div className="home__inputContainer">
-                    {<Search />}
+                    {<Search route="search/" />}
                 </div>
             </div>
             <Footer class="footer-fixed"/>
