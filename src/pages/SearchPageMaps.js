@@ -53,7 +53,7 @@ function SearchPage() {
                 <UnderConstruction />
             </div>
 
-            <Footer class="footer-static"/>            
+            <Footer class="footer-fixed"/>            
         </div>
   )
 }
