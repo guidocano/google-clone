@@ -49,7 +49,7 @@ function SearchPageNews() {
             </div>
             
             
-            <div className='searchPage__results'>
+            <div className='searchPage__resultsUC'>
                 <UnderConstruction />
             </div>
 

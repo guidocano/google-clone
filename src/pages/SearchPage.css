@@ -137,6 +137,13 @@
     min-height: 100vh;
 }
 
+.searchPage__resultsUC {
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: 190px;
+    margin-bottom: 100px;
+}
+
 .searchPage__resultTitle{
     text-decoration: none;
 }
@@ -210,6 +217,11 @@
     }
 
     .searchPage__results {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .searchPage__resultsUC {
         margin-left: 20px;
         margin-right: 20px;
     }

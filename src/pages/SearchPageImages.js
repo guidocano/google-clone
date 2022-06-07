@@ -19,8 +19,6 @@ function SearchPageImages() {
     const [activeInput] = active
 
     const {data} = useUnsplash(activeInput);
-    // console.log(data?.data.results)
-
 
     return (
         

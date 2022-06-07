@@ -1,13 +1,15 @@
-import React from 'react'
-// import {TermContext} from "../api/TermContext"
+import React, {useContext, useEffect, useState} from 'react'
+import {TermContext} from "../api/TermContext"
 import "./SearchPage.css"
 import Search from "../components/Search"
 import Footer from "../components/Footer"
 import logo from "../assets/logo.png"
 import {Link} from "react-router-dom"
 import SmallNavbar from "../components/SmallNavbar"
-import UnderConstruction from "../components/UnderConstruction"
-// import Response from "../pages/Response"
+import useYoutube from "../api/useYoutube";
+import VideoList from "../components/video/VideoList"
+// import VideoDetail from "../components/VideoDetail"
+
 
 import AppsIcon from '@mui/icons-material/Apps';
 import ButtonBlue from "../components/ButtonBlue"
@@ -15,14 +17,34 @@ import ButtonBlue from "../components/ButtonBlue"
 
 function SearchPageVideos() {
 
-    // const {active} = useContext(TermContext)
-    // const [inputValue, setInputValue] = input
-    // const [activeInput] = active
+    const {active} = useContext(TermContext)
+    const [activeInput] = active
     
     // const { data } = useGoogleSearch(activeInput);
+    
+    const [videos, setVideos] = useState([]);
+    // const [selectedVideo, setSelectedVideo] = useState(null);
 
 
-    // console.log(data?.data)
+    useEffect(() => {
+        onTermSubmit(activeInput);
+    }, [activeInput]);
+
+    const onTermSubmit = async term => {
+
+        const response = await useYoutube.get("/search", {
+            params: {
+                q: term
+            }
+        });
+
+
+        setVideos(response.data.items)
+        // setSelectedVideo(response.data.items[0])
+    };
+
+
+
 
 
     return (
@@ -43,17 +65,32 @@ function SearchPageVideos() {
                     </div>
 
                     <div className='searchPage__options'>
-                        <SmallNavbar  optionVideos='icon-all'/>
+                        <SmallNavbar optionVideos='icon-all'/>
                     </div>
                 </div>
             </div>
             
             
             <div className='searchPage__results'>
-                <UnderConstruction />
+
+                <div className="ui grid">
+                    <div className="ui row">
+                        <div className="five wide column">
+                            <VideoList 
+                                // onVideoSelect={setSelectedVideo}
+                                videos={videos}
+                            />
+                        </div>
+                            {/* <div className="eleven wide column">
+                                <VideoDetail video={selectedVideo} />
+                            </div> */}
+
+                    </div>
+                </div>
+
             </div>
 
-            <Footer class="footer-fixed"/>            
+            <Footer class="footer-static"/>            
         </div>
   )
 }

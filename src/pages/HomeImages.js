@@ -30,7 +30,7 @@ const Home = () => {
             <div className="home__body"> 
                 <img src={logo} className="logo" alt="google logo" />
                 <div className="home__inputContainer">
-                    {<Search route="images/search/" />}
+                    <Search hideButtons route="images/search/" />
                 </div>
             </div>
             <Footer class="footer-fixed"/>
