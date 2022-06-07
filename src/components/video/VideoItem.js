@@ -3,7 +3,7 @@ import React from "react";
 
 
 const VideoItem = ({videoprop, onVideoSelectprop}) => {
-    console.log(videoprop)
+    // console.log(videoprop)
     return (
         // <div onClick={() => onVideoSelectprop(videoprop)} className="video-item item">
         <div className="video-item item">
