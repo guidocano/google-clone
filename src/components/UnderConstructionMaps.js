@@ -3,15 +3,15 @@ import "./UnderConstruction.css"
 import logo from "../assets/logo.png"
 import robot from "../assets/robot.png"
 
-function UnderConstruction() {
+function UnderConstructionMaps() {
   return (
     <div className='row'>
         <div className='column'>
             <div><img className='google-logo2' src={logo} alt="google logo"></img></div>
-            <div><p><span><b>Hi! </b></span><span className='text-gray'>Nothing to see here.</span></p>
+            <div><p><span><b>📍 You are here. </b></span><span className='text-gray'>That's all we got for now.</span></p>
             <br/>
-            <p>Check your local newspaper or come back later for the last updates!</p>
-            <p>Meanwhile you can go see the rest of my portfolio <a href="https://guidocalciano.com.ar">here.</a></p></div>
+            <p>This page is still under construction.</p>
+            <p>Meanwhile you can go check the rest of my portfolio <a href="https://guidocalciano.com.ar">here.</a> Come back soon!</p></div>
         </div>
         <div className='column'>
             <div><img className='robot' src={robot} alt="google logo"></img></div>
@@ -20,4 +20,4 @@ function UnderConstruction() {
   )
 }
 
-export default UnderConstruction
+export default UnderConstructionMaps
