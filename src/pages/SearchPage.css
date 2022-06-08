@@ -164,11 +164,14 @@
 
 .searchPage__resultTitle > h2 {
     font-weight: 400;
+    font-size: 21px;
 }
 
-.searchPage_resultSnippet {
-    margin-top: 10px;
+.searchPage__resultSnippet {
+    margin-top: 4px;
+    font-size: 14px;
 }
+
 
 
 
