@@ -7,10 +7,7 @@ import logo from "../assets/logo.png"
 import {Link} from "react-router-dom"
 import SmallNavbar from "../components/SmallNavbar"
 import UnderConstruction from "../components/UnderConstruction"
-// import Response from "../pages/Response"
-
-import AppsIcon from '@mui/icons-material/Apps';
-import ButtonBlue from "../components/ButtonBlue"
+import NavbarRight from "../components/NavbarRight"
 
 
 function SearchPageNews() {
@@ -37,10 +34,7 @@ function SearchPageNews() {
                 <div className='searchPage__headerBody'>
                     <Search hideButtons route="news/search" />
 
-                    <div className="right-navbar">
-                        <AppsIcon className="apps-icon"/>
-                        <ButtonBlue text="Sign in"/>
-                    </div>
+                    <NavbarRight />
 
                     <div className='searchPage__options'>
                         <SmallNavbar  optionNews='icon-all'/>

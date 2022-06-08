@@ -7,10 +7,10 @@ import useGoogleSearch from "../api/useGoogleSearch"
 import logo from "../assets/logo.png"
 import {Link} from "react-router-dom"
 import SmallNavbar from "../components/SmallNavbar"
+import NavbarRight from "../components/NavbarRight"
+
 // import Response from "../pages/Response"
 
-import AppsIcon from '@mui/icons-material/Apps';
-import ButtonBlue from "../components/ButtonBlue"
 
 
 function SearchPage() {
@@ -37,10 +37,7 @@ function SearchPage() {
                 <div className='searchPage__headerBody'>
                     <Search hideButtons route="search/" />
 
-                    <div className="right-navbar">
-                        <AppsIcon className="apps-icon"/>
-                        <ButtonBlue text="Sign in"/>
-                    </div>
+                    <NavbarRight />
 
                     <div className='searchPage__options'>
                         <SmallNavbar  optionAll='icon-small'/>

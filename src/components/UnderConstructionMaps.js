@@ -10,7 +10,7 @@ function UnderConstructionMaps() {
             <div><img className='google-logo2' src={logo} alt="google logo"></img></div>
             <div><p><span><b>📍 You are here. </b></span><span className='text-gray'>That's all we got for now.</span></p>
             <br/>
-            <p>This page is still under construction.</p>
+            <p>This page is still under development.</p>
             <p>Meanwhile you can go check the rest of my portfolio <a href="https://guidocalciano.com.ar">here.</a> Come back soon!</p></div>
         </div>
         <div className='column'>

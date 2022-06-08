@@ -9,10 +9,7 @@ import SmallNavbar from "../components/SmallNavbar"
 import useYoutube from "../api/useYoutube";
 import VideoList from "../components/video/VideoList"
 // import VideoDetail from "../components/VideoDetail"
-
-
-import AppsIcon from '@mui/icons-material/Apps';
-import ButtonBlue from "../components/ButtonBlue"
+import NavbarRight from "../components/NavbarRight"
 
 
 function SearchPageVideos() {
@@ -59,10 +56,7 @@ function SearchPageVideos() {
                 <div className='searchPage__headerBody'>
                     <Search hideButtons route="videos/search" />
 
-                    <div className="right-navbar">
-                        <AppsIcon className="apps-icon"/>
-                        <ButtonBlue text="Sign in"/>
-                    </div>
+                    <NavbarRight />
 
                     <div className='searchPage__options'>
                         <SmallNavbar optionVideos='icon-all'/>

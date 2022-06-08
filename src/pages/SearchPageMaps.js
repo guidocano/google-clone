@@ -6,11 +6,8 @@ import Footer from "../components/Footer"
 import logo from "../assets/logo.png"
 import {Link} from "react-router-dom"
 import SmallNavbar from "../components/SmallNavbar"
-import UnderConstruction from "../components/UnderConstruction"
-// import Response from "../pages/Response"
-
-import AppsIcon from '@mui/icons-material/Apps';
-import ButtonBlue from "../components/ButtonBlue"
+import UnderConstructionMaps from "../components/UnderConstructionMaps"
+import NavbarRight from "../components/NavbarRight"
 
 
 function SearchPage() {
@@ -37,10 +34,7 @@ function SearchPage() {
                 <div className='searchPage__headerBody'>
                     <Search hideButtons route="maps/search" />
 
-                    <div className="right-navbar">
-                        <AppsIcon className="apps-icon"/>
-                        <ButtonBlue text="Sign in"/>
-                    </div>
+                    <NavbarRight />
 
                     <div className='searchPage__options'>
                         <SmallNavbar  optionMaps='icon-all'/>
@@ -50,7 +44,7 @@ function SearchPage() {
             
             
             <div className='searchPage__resultsUC'>
-                <UnderConstruction />
+                <UnderConstructionMaps />
             </div>
 
             <Footer class="footer-fixed"/>            

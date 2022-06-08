@@ -8,9 +8,8 @@ import {Link} from "react-router-dom"
 import useUnsplash from "../api/useUnsplash"
 import ImageList from "../components/ImageList"
 import SmallNavbar from "../components/SmallNavbar"
+import NavbarRight from "../components/NavbarRight"
 
-import AppsIcon from '@mui/icons-material/Apps';
-import ButtonBlue from "../components/ButtonBlue"
 
 
 function SearchPageImages() {
@@ -32,10 +31,7 @@ function SearchPageImages() {
                 <div className='searchPage__headerBody'>
                     <Search hideButtons route="images/search/" />
 
-                    <div className="right-navbar">
-                        <AppsIcon className="apps-icon"/>
-                        <ButtonBlue text="Sign in"/>
-                    </div>
+                    <NavbarRight />
 
                     <div className='searchPage__options'>
                         <SmallNavbar  optionImages='icon-all'/>
