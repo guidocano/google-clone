@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "./pages/Home"
 import HomeImages from "./pages/HomeImages"
-import './App.css';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import SearchPageImages from "./pages/SearchPageImages";
