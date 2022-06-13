@@ -25,6 +25,7 @@
     margin-top: 20px;
     max-width: 560px;
     background-color: #1f1f1f;
+    font-size: 17px;
 
 }
 
@@ -34,7 +35,7 @@
     border: none;
     background-color: #1f1f1f;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     outline-width: 0;
 }
 
@@ -43,6 +44,7 @@
     padding: 10px 20px;
     border: none;
     outline-width: 0;
+    font-size: 16px;
 }
 
 .search__inputIcon {
@@ -70,16 +72,15 @@
     display: none;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE */ 
 /* @media screen and (max-width: 640px) {
 
-    .search__buttons {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        z-index: 999;
-        display: none;
+    .search__input > input {
+        font-size: 15px;
+    }
+
+    .search__input-dark > input {
+        font-size: 15px;
     }
 
 } */
