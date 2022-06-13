@@ -17,7 +17,7 @@ function DarkMode() {
 
   return (
     <React.Fragment>
-        <div className={theme === "light" ? "label-dark-mode-hidden" : "label-dark-mode-dark-hidden"}>Mode: {theme}</div>
+        <div className={theme === "light" ? "label-dark-mode-hidden" : "label-dark-mode-dark-hidden"}>{theme === "light"? "Light": "Dark"}</div>
         {/* <span>&nbsp;&nbsp;</span>
         <div className={theme === "light" ? "label-dark-mode" : "label-dark-mode-dark"}>{theme}</div> */}
         <Switch 
