@@ -1,11 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./Footer.css"
 import {Link} from "react-router-dom";
+import {TermContext} from "../api/TermContext"
 
 function Footer(props) {
+
+  const {themes} = useContext(TermContext)
+  const [theme] = themes
+
   return (
     <footer className={props.class}>
-        <div className="footerbox">
+        <div className={theme === "light"? "footerbox" : "footerbox-dark"}>
             <div className="left">
                 <Link to=" ">About</Link>
                 <Link to=" ">Advertising</Link>

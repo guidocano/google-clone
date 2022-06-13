@@ -22,6 +22,24 @@
     padding: 14px;
 }
 
+.footerbox-dark {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    border: rgb(45, 45, 45) solid 1px;
+    background-color: rgb(23, 23, 23);
+    padding: 14px;
+}
+
+.footerbox-dark .right a{
+    color: rgb(181, 181, 181);
+}
+
+.footerbox-dark .left a{
+    color: rgb(181, 181, 181);
+}
+
+
 footer a{
     color: rgb(117, 117, 117);
     text-decoration: none;

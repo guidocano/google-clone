@@ -15,9 +15,11 @@ import NavbarRight from "../components/NavbarRight"
 
 function SearchPage() {
 
-    const {active} = useContext(TermContext)
+    const {active, themes} = useContext(TermContext)
     // const [inputValue, setInputValue] = input
     const [activeInput] = active
+    const [, setTheme] = themes
+    setTheme("light")
     
     const { data } = useGoogleSearch(activeInput);
 

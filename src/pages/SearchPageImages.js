@@ -14,8 +14,10 @@ import NavbarRight from "../components/NavbarRight"
 
 function SearchPageImages() {
 
-    const {active} = useContext(TermContext)
+    const {active, themes} = useContext(TermContext)
     const [activeInput] = active
+    const [, setTheme] = themes
+    setTheme("light")
 
     const {data} = useUnsplash(activeInput);
 

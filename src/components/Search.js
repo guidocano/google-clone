@@ -8,9 +8,10 @@ import {useNavigate} from "react-router-dom"
 
 function Search ({hideButtons = false, route}) {
 
-    const {input, active} = useContext(TermContext)
+    const {input, active, themes} = useContext(TermContext)
     const [inputValue, setInputValue] = input
     const [, setActiveInput] = active
+    const [theme] = themes
 
     const navigate = useNavigate()  
     
@@ -32,7 +33,7 @@ function Search ({hideButtons = false, route}) {
 
     return (
         <form onSubmit={search} className="search">
-            <div className="search__input">
+            <div className={theme === "light"? "search__input" : "search__input-dark" }>
                 <SearchIcon className="search__inputIcon" />
                 <input value={inputValue} onChange={e => setInputValue(e.target.value)} />
                 <MicIcon className="mic-icon"/>

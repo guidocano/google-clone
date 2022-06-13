@@ -4,6 +4,13 @@
     height: 100vh;
 }
 
+.home-dark {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1f1f1f
+}
+
 .home__header{
     display: flex;
     justify-content: space-between;
@@ -33,6 +40,10 @@
     visibility: hidden;
 }
 
+.home__headerLeft-dark {
+    visibility: hidden;
+}
+
 .home__headerRight > .MuiSvgIcon-root {
     margin-right:20px;
 }
@@ -58,6 +69,15 @@
     cursor: pointer;
 }
 
+.apps-icon-dark{
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+.home__headerToHide-dark {
+    color: white!important;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 640px) {
     
@@ -65,7 +85,19 @@
         visibility:visible;
     }
 
+    .home__headerLeft-dark{
+        visibility:visible;
+    }
+
+    .home__headerLeft-dark a{
+        color: white!important;
+    }
+
     .home__headerToHide{
+        display: none;
+    }
+
+    .home__headerToHide-dark{
         display: none;
     }
 

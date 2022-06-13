@@ -20,3 +20,25 @@
     border: rgb(221, 221, 221) solid 1.5px;
 
 }
+
+.search-button-dark{
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 35px;
+    background-color: rgb(59, 59, 59);
+    margin:5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: rgb(59, 59, 59) solid 1.5px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-button-dark:hover{
+    border: rgb(221, 221, 221) solid 1.5px;
+
+}

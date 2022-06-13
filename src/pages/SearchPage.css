@@ -38,7 +38,24 @@
 .right-navbar div{
     display: flex;
     margin-left: 10px;
-     
+}
+
+.label-dark-mode {
+    margin-top: -3px;
+}
+
+.label-dark-mode-hidden {
+    margin-top: -3px;
+}
+
+.label-dark-mode-dark {
+    color: white;
+    margin-top: -3px;
+}
+
+.label-dark-mode-dark-hidden {
+    color: white;
+    margin-top: -3px;
 }
 
 .searchPage__headerBody > .search > .search__input {
@@ -254,6 +271,14 @@
         height: 3px;
         background: rgb(16, 129, 235);
         transform: translateX(0%);
+    }
+
+    .label-dark-mode-hidden {
+        display: none;
+    }
+
+    .label-dark-mode-dark-hidden {
+        display: none;
     }
 
 }
