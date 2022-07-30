@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./pages/Home"
 import HomeImages from "./pages/HomeImages"
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as HashRouter, Routes, Route} from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import SearchPageImages from "./pages/SearchPageImages";
 import SearchPageMaps from "./pages/SearchPageMaps";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       
-        <Router>
+        <HashRouter>
           <Routes>
             <Route path="/google-clone/search" element={<SearchPage />} />
             <Route path="/google-clone/images/search" element={<SearchPageImages />} />
@@ -25,7 +25,7 @@ function App() {
             <Route path="/google-clone/images" element={<HomeImages/>} />
             <Route path="/google-clone/lucky" element={<LuckySearch/>} />
           </Routes>
-        </Router>
+        </HashRouter>
       
     </div>
   );
