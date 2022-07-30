@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./pages/Home"
 import HomeImages from "./pages/HomeImages"
-import { BrowserRouter as HashRouter, Routes, Route} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import SearchPageImages from "./pages/SearchPageImages";
 import SearchPageMaps from "./pages/SearchPageMaps";
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       
-        <HashRouter basename='/'>
+
           <Routes>
             <Route path="/search" element={<SearchPage />} />
             <Route path="/images/search" element={<SearchPageImages />} />
@@ -25,7 +25,7 @@ function App() {
             <Route path="/images" element={<HomeImages/>} />
             <Route path="/lucky" element={<LuckySearch/>} />
           </Routes>
-        </HashRouter>
+        
       
     </div>
   );

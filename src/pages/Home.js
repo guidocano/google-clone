@@ -11,7 +11,6 @@ import ButtonBlue from "../components/ButtonBlue"
 import DarkMode from "../components/DarkMode";
 import {TermContext} from "../api/TermContext"
 
-// 3.05min
 
 const Home = () => {
 
