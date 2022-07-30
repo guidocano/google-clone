@@ -12,7 +12,7 @@ function LuckySearch() {
     const { data } = useGoogleSearch(activeInput? activeInput : "programming");
     const link = `${data?.data.items[0].link}`
 
-    return ( activeInput === "" ? navigate("/google-clone") :
+    return ( activeInput === "" ? navigate("/") :
         data?.data.items.length ? window.open(link,"_self") : <div>Loading...</div>
     )
 }

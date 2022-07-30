@@ -22,13 +22,13 @@ const Home = () => {
         <div className={theme === "light" ? "home" : "home-dark"}>
             <div className="home__header">
                 <div className={theme === "light"? "home__headerLeft" : "home__headerLeft-dark"}>
-                    <Link to="/google-clone">ALL</Link>
-                    <Link className="header-all" to="/google-clone/images">IMAGES</Link>
+                    <Link to="/">ALL</Link>
+                    <Link className="header-all" to="/images">IMAGES</Link>
                 </div>
 
                 <div className="home__headerRight">
-                    <Link to="/google-clone" className="home__headerToHide"></Link>
-                    <Link to="/google-clone/images" className="home__headerToHide"></Link>
+                    <Link to="/" className="home__headerToHide"></Link>
+                    <Link to="/images" className="home__headerToHide"></Link>
                     <DarkMode />
                     <AppsIcon className={theme === "light"? "apps-icon" : "apps-icon-dark"}/>
                     <ButtonBlue text="Sign in"/>

@@ -14,16 +14,16 @@ function App() {
   return (
     <div className="App">
       
-        <HashRouter>
+        <HashRouter basename='/'>
           <Routes>
-            <Route path="/google-clone/search" element={<SearchPage />} />
-            <Route path="/google-clone/images/search" element={<SearchPageImages />} />
-            <Route path="/google-clone/maps/search" element={<SearchPageMaps />} />
-            <Route path="/google-clone/news/search" element={<SearchPageNews />} />
-            <Route path="/google-clone/videos/search" element={<SearchPageVideos />} />
-            <Route path="/google-clone" element={<Home/>} />
-            <Route path="/google-clone/images" element={<HomeImages/>} />
-            <Route path="/google-clone/lucky" element={<LuckySearch/>} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/images/search" element={<SearchPageImages />} />
+            <Route path="/maps/search" element={<SearchPageMaps />} />
+            <Route path="/news/search" element={<SearchPageNews />} />
+            <Route path="/videos/search" element={<SearchPageVideos />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/images" element={<HomeImages/>} />
+            <Route path="/lucky" element={<LuckySearch/>} />
           </Routes>
         </HashRouter>
       

@@ -19,7 +19,7 @@ function Search ({hideButtons = false, route}) {
         e.preventDefault();
         if (inputValue !== "") {
             setActiveInput(inputValue)
-            navigate(`/google-clone/${route}`)
+            navigate(`/${route}`)
         }
     }
 
@@ -27,7 +27,7 @@ function Search ({hideButtons = false, route}) {
         e.preventDefault();
         if (inputValue !== "") {
             setActiveInput(inputValue)
-            navigate("/google-clone/lucky")
+            navigate("/lucky")
         }
     }
 

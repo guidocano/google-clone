@@ -13,31 +13,31 @@ const SmallNavbar = (props) => {
         <React.Fragment>
             <div className='searchPage__optionsLeft'>
                 <div className='searchPage__option'>
-                    <Link className={props.optionAll} to="/google-clone/search">
+                    <Link className={props.optionAll} to="/search">
                         <SearchIcon className="searchPage__optionsIcons"/>
                         All
                         </Link>
                 </div>
                 <div className='searchPage__option'>
-                    <Link className={props.optionImages} to="/google-clone/images/search">
+                    <Link className={props.optionImages} to="/images/search">
                         <ImageIcon className="searchPage__optionsIcons"/>
                         Images
                     </Link>
                 </div>
                 <div className='searchPage__option'>
-                    <Link className={props.optionMaps} to="/google-clone/maps/search">
+                    <Link className={props.optionMaps} to="/maps/search">
                         <PinDropIcon className="searchPage__optionsIcons"/>
                         Maps
                     </Link>
                 </div>
                 <div className='searchPage__option'>
-                    <Link className={props.optionNews} to="/google-clone/news/search">
+                    <Link className={props.optionNews} to="/news/search">
                         <FeedIcon className="searchPage__optionsIcons"/>
                         News
                     </Link>
                 </div>
                 <div className='searchPage__option'>
-                    <Link className={props.optionVideos} to="/google-clone/videos/search">
+                    <Link className={props.optionVideos} to="/videos/search">
                         <OndemandVideoIcon className="searchPage__optionsIcons"/>
                         Videos
                     </Link>

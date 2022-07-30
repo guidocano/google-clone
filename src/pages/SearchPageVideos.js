@@ -49,7 +49,7 @@ function SearchPageVideos() {
         <div className='searchPage'>
 
             <div className='searchPage__header'>
-                <Link to="/google-clone">
+                <Link to="/">
                     <img className='searchPage__logo' src={logo} alt="google logo" />    
                 </Link>
                 
